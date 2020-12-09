@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-    validates :username, uniquess: true, presence: true 
+    validates :username, uniqueness: true, presence: true 
     has_many :comments 
 end

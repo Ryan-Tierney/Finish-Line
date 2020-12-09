@@ -4,4 +4,8 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.first
+
+User.create(username: "Ryan", password_digest: SecureRandom.hex)
+
+Comment.create(text: "Let's see if this works!", user_id: 1)
