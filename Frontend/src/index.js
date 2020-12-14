@@ -473,16 +473,19 @@ class Game {
     constructor() {
         this.gameWidth = 800;
         this.gameHeight = 800;
-
+        //this.timer = document.getElementById('counter-container');
+        //this.totalTime = totalTime;
+        //this.currentTime = totalTime;
     }
 
     start() {
         const enemyWidth = 30;
         const enemyHeight = 30;
         let enemyXPosition = 400 - enemyWidth / 2;
-
+        //this.currentTime = this.totalTime;
         this.player = new Player(this);
         new InputHandler(this.player);
+        //this.counter = this.startCounter();
         this.verticalenemy1 = new VerticalEnemy(enemyXPosition, this);
         this.verticalenemy2 = new VerticalEnemy((200 - enemyWidth / 2), this);
         this.verticalenemy3 = new VerticalEnemy((600 - enemyWidth / 2), this);
@@ -494,6 +497,13 @@ class Game {
         this.wallenemy3 = new Wall((750 - enemyWidth / 2), (0 - enemyHeight / 2), this); 
         this.goal = new Goal(this);
     }
+
+    /*startCounter() {
+        return setInterval(() => {
+            this.timeRemaining++; 
+            this.timer.innerText = this.timeRemaining;
+        }, 1000);
+    } */
 
     update(deltaTime) {
         this.player.update(deltaTime);
@@ -520,6 +530,8 @@ class Game {
         this.goal.draw(context);        
     }
 }
+
+// Global Scope
 
 const signUpButton = document.getElementById("signUpButton");
 
@@ -644,6 +656,7 @@ function logIn(e) {
 
 function win() {
     alert("You Win!");
+    clearInterval(this.counter);
 }
 
 function updateLevelsCompleted() {
