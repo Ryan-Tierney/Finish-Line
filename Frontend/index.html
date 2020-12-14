@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="eng" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>FINISHLINE</title>
+        <link rel="stylesheet" type="text/css" href="styles/main.css" media="screen"/>
+    </head>
+    <body>
+        <h1>REACH THE FINISH LINE</h1>
+
+        <div id="gameScreens">
+            <canvas id="level-1" width="800" height="800"></canvas>
+        </div>
+        <div id="controls">
+            <h2>Controls</h2>
+            <h4>W: UP |
+                S: DOWN |
+                D: RIGHT |
+                A: LEFT</h4>
+        </div>
+        <div id="audio-controller">
+            <button class="button" id="start-audio">Music</button>
+        </div>
+        <div id="user-info">
+            <h2>USER:</h1>
+            <h2 id="current-user">
+                NOT LOGGED IN
+            </h2>
+            <br>
+            <h2>HIGH SCORE:</h1>
+            <h2 id="levels-finished">
+                NOT LOGGED IN
+            </h2>
+            <br>
+            <h2>BEST TIME:</h2>
+             <h2 id="best-time"> 
+                 00:00
+             </h2> 
+        </div>
+        <div id="counter-container">
+            <h2>TIME</h2> 
+             <h2>00:00</h2>   
+        </div>
+        <br>
+        <div id="user-forms" class="general-forms">
+            <form id="SignUp" class="form">
+                <h3>Sign Up</h3>
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="username-signup"><br><br>
+                <button class="button" id="signUpButton">Sign Up</button>
+            </form>
+
+            <br>
+
+            <form id="login" class="form">
+                <h3>Login</h3>
+                <label for="username">Username: </label>
+                <input type="text" name="username" id="username-login"><br><br>
+                <button id="logInButton">Log In</button>
+            </form>
+        </div>
+        <div id="comments-section" class="general-forms">
+            <h2> COMMENTS </h1>
+            <form id="comment-form" class="form">
+                <h5><i>must be signed in</i></h5>
+                <label for="comment">New Comment: </label>
+                <input type="text" name="new_comment" id="newUserComment"><br><br>
+                <button id="newCommentButton">Share</button>
+            </form>
+        </div>
+        <br>
+        <div class="comment-list"></div>
+        <script defer type="application/javascript" src="src/index.js" charset="UTF-8"></script>
+    </body>
+</html> 
