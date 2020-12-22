@@ -5,7 +5,10 @@ body {
 
 h1 {
     text-align: center;
-    color: red;
+    color: white; 
+    background-color: red; 
+    border: 3px solid white; 
+    border-radius: 25px;
 }
 
 h3 {
